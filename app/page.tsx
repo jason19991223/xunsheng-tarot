@@ -26,7 +26,7 @@ export default function HomePage() {
               {siteContent.heroTitle}
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-ink/70">{siteContent.heroSubtitle}</p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 hidden flex-col gap-3 lg:flex lg:flex-row">
               <Link
                 href="/quiz"
                 className="rounded-full bg-plum px-6 py-3 text-center text-sm font-semibold text-cream shadow-sm transition hover:bg-midnight"
@@ -52,6 +52,21 @@ export default function HomePage() {
               priority
               className="relative aspect-[16/9] w-full rounded-2xl border border-white/70 object-cover shadow-lg sm:aspect-[16/7] sm:rounded-[24px] lg:shadow-xl"
             />
+          </div>
+
+          <div className="flex flex-col gap-3 sm:flex-row lg:hidden">
+            <Link
+              href="/quiz"
+              className="rounded-full bg-plum px-6 py-3 text-center text-sm font-semibold text-cream shadow-sm transition hover:bg-midnight"
+            >
+              開始心理測驗
+            </Link>
+            <Link
+              href="/articles"
+              className="rounded-full border border-plum/20 bg-white/60 px-6 py-3 text-center text-sm font-semibold text-plum transition hover:border-mistgold"
+            >
+              閱讀塔羅文章
+            </Link>
           </div>
         </div>
       </section>
