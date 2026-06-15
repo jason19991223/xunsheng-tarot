@@ -42,15 +42,15 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-md">
-            <div className="absolute -inset-4 rounded-full bg-mistgold/18 blur-3xl" />
+          <div className="relative mx-auto w-full max-w-[19rem] sm:max-w-sm lg:max-w-md">
+            <div className="absolute -inset-3 rounded-full bg-mistgold/14 blur-3xl" />
             <Image
               src={siteContent.coverImage}
               alt={`${siteContent.name}部落格縮圖`}
               width={1024}
               height={1024}
               priority
-              className="relative aspect-square w-full rounded-[28px] border border-white/70 object-cover shadow-xl"
+              className="relative aspect-[4/3] w-full rounded-2xl border border-white/70 object-cover shadow-lg sm:aspect-square sm:rounded-[24px] lg:shadow-xl"
             />
           </div>
         </div>
