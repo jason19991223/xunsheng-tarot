@@ -51,6 +51,9 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
   const relatedArticles = article.relatedArticles
     .map((relatedSlug) => getArticleBySlug(relatedSlug))
     .filter((item): item is NonNullable<typeof item> => Boolean(item));
+  const relatedQuizzes = article.relatedQuizzes
+    .map((quizSlug) => getQuizBySlug(quizSlug))
+    .filter((quiz): quiz is NonNullable<typeof quiz> => Boolean(quiz));
 
   return (
     <article className="mx-auto grid max-w-6xl gap-8 px-4 py-10 lg:grid-cols-[minmax(0,1fr)_280px]">
@@ -100,13 +103,13 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
           {siteContent.disclaimer}
         </p>
 
-        {article.relatedQuizzes.length > 0 ? (
+        {relatedQuizzes.length > 0 ? (
           <section className="mt-10 border-t border-plum/10 pt-6">
             <h2 className="font-serif text-2xl font-semibold text-midnight">相關心理測驗</h2>
             <div className="mt-4 flex flex-wrap gap-2">
-              {article.relatedQuizzes.map((quizSlug) => (
-                <Link key={quizSlug} href={`/quiz/${quizSlug}`} className="rounded-full bg-white px-3 py-1.5 text-sm text-plum">
-                  {getQuizBySlug(quizSlug)?.title ?? quizSlug}
+              {relatedQuizzes.map((quiz) => (
+                <Link key={quiz.slug} href={`/quiz/${quiz.slug}`} className="rounded-full bg-white px-3 py-1.5 text-sm text-plum">
+                  {quiz.title}
                 </Link>
               ))}
             </div>
