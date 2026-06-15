@@ -243,8 +243,6 @@ function buildArticleContent(title: string, excerpt: string, categoryLabel: stri
   const secondaryTag = tags[1] ?? "自我探索";
 
   return [
-    `## ${title}`,
-    excerpt,
     `這篇文章以「${primaryTag}」作為切入點，目的不是給出單一答案，而是讓你把正在發生的感受、期待與現實條件分開看。當問題被拆清楚，選擇通常也會少一點急迫感。`,
     `### 先辨認目前的位置`,
     `如果你是因為關係、金錢、安全感或抽牌結果而來，先不要急著要求自己立刻做決定。可以先寫下三件事：已經發生的事、你對它的解讀、你真正擔心的後果。這三者常被混在一起，造成不必要的壓力。`,
