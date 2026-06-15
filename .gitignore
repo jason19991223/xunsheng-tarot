@@ -1,0 +1,11 @@
+node_modules
+.next
+out
+.env
+.env*.local
+dist
+*.log
+tsconfig.tsbuildinfo
+
+.vercel
+.codex-remote-attachments
