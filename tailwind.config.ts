@@ -19,8 +19,22 @@ const config: Config = {
         ink: "#17121f"
       },
       fontFamily: {
-        sans: ["system-ui", "Noto Sans TC", "Microsoft JhengHei", "sans-serif"],
-        serif: ["Georgia", "Noto Serif TC", "PMingLiU", "serif"]
+        sans: [
+          "Noto Sans TC",
+          "PingFang TC",
+          "Microsoft JhengHei",
+          "Segoe UI",
+          "system-ui",
+          "sans-serif"
+        ],
+        serif: [
+          "Noto Serif TC",
+          "Songti TC",
+          "STSong",
+          "Microsoft JhengHei",
+          "Georgia",
+          "serif"
+        ]
       },
       boxShadow: {
         soft: "0 20px 60px rgba(10, 13, 31, 0.28)"

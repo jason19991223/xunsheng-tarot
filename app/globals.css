@@ -18,6 +18,11 @@ body {
   margin: 0;
   background: #fbf3e7;
   color: #17121f;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
 }
 
 a {
