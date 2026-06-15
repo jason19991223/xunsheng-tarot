@@ -12,6 +12,8 @@ export const siteContent = {
     "尋聲塔羅整理塔羅象徵、關係議題與自我探索內容，讓讀者用更清醒、溫柔的方式理解自己。",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   email: "email@example.com",
+  instagramHandle: "@TRUE_SEEKER_1223",
+  instagramUrl: "https://www.instagram.com/true_seeker_1223/",
   coverImage: "/images/cover.png",
   markImage: "/images/mark.png",
   disclaimer:

@@ -45,6 +45,9 @@ export function Footer() {
             <Link href="/contact" className="hover:text-mistgold">
               聯絡我們
             </Link>
+            <a href={siteContent.instagramUrl} target="_blank" rel="noreferrer" className="hover:text-mistgold">
+              Instagram {siteContent.instagramHandle}
+            </a>
             {utilityRoutes.map((item) => (
               <Link key={item.href} href={item.href} className="hover:text-mistgold">
                 {item.label}

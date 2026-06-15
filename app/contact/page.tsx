@@ -34,6 +34,14 @@ export default function ContactPage() {
           >
             {siteContent.email}
           </a>
+          <a
+            href={siteContent.instagramUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="ml-0 mt-3 inline-flex rounded-full border border-plum/20 bg-cream px-5 py-3 text-sm font-semibold text-plum sm:ml-3"
+          >
+            Instagram {siteContent.instagramHandle}
+          </a>
           <p className="mt-4 text-xs leading-6 text-ink/50">
             若你的問題涉及醫療、法律、投資、心理治療或重大人生決策，請優先尋求合格專業人士協助。
           </p>
