@@ -42,15 +42,15 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-[19rem] sm:max-w-sm lg:max-w-md">
+          <div className="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-xl">
             <div className="absolute -inset-3 rounded-full bg-mistgold/14 blur-3xl" />
             <Image
-              src={siteContent.coverImage}
+              src="/images/hero-banner.jpg"
               alt={`${siteContent.name}部落格縮圖`}
-              width={1024}
-              height={1024}
+              width={1280}
+              height={450}
               priority
-              className="relative aspect-[4/3] w-full rounded-2xl border border-white/70 object-cover shadow-lg sm:aspect-square sm:rounded-[24px] lg:shadow-xl"
+              className="relative aspect-[16/9] w-full rounded-2xl border border-white/70 object-cover shadow-lg sm:aspect-[16/7] sm:rounded-[24px] lg:shadow-xl"
             />
           </div>
         </div>
