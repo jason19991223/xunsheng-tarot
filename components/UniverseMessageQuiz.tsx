@@ -158,14 +158,11 @@ export function UniverseMessageQuiz() {
         <div className="mt-7 rounded-xl border border-plum/10 bg-white p-4">
           <h2 className="font-serif text-xl font-semibold text-midnight">下一步</h2>
           <p className="mt-2 text-sm leading-7 text-ink/66">
-            如果這個結果讓你有感，可以接著閱讀更多塔羅文章，或透過聯絡頁預約塔羅占卜。
+            如果這個結果讓你有感，可以接著閱讀更多塔羅文章，延伸整理你最近收到的提醒。
           </p>
           <div className="mt-4 flex flex-col gap-3 sm:flex-row">
             <Link href="/articles" className="rounded-full bg-cream px-4 py-2 text-center text-sm font-semibold text-plum">
               閱讀更多文章
-            </Link>
-            <Link href="/contact" className="rounded-full bg-plum px-4 py-2 text-center text-sm font-semibold text-cream">
-              預約塔羅占卜
             </Link>
           </div>
         </div>
