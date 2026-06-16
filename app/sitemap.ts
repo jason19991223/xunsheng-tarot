@@ -47,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75
   }));
 
-  const categoryRoutes = Object.keys(categoryLabels).map((category) => ({
+  const categoryRoutes = Object.keys(categoryLabels).filter((category) => category !== "tarot-meanings").map((category) => ({
     url: `${siteContent.url}/category/${category}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,

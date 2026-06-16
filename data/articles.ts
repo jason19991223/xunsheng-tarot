@@ -219,7 +219,7 @@ const articleSeeds: Array<{
   }
 ];
 
-export const articles: Article[] = articleSeeds.map((article, index) => {
+export const articles: Article[] = articleSeeds.filter((article) => article.category !== "tarot-meanings").map((article, index) => {
   const categoryLabel = categoryLabels[article.category];
   const relatedArticles = articleSeeds
     .filter((candidate) => candidate.slug !== article.slug && candidate.category === article.category)

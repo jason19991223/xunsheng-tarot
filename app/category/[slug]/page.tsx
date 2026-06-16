@@ -10,14 +10,14 @@ type CategoryPageProps = {
   params: Promise<{ slug: string }>;
 };
 
-const categorySlugs = Object.keys(categoryLabels) as ArticleCategory[];
+const categorySlugs = (Object.keys(categoryLabels) as ArticleCategory[]).filter((slug) => slug !== "tarot-meanings");
 
 export function generateStaticParams() {
   return categorySlugs.map((slug) => ({ slug }));
 }
 
 function isArticleCategory(slug: string): slug is ArticleCategory {
-  return slug in categoryLabels;
+  return slug !== "tarot-meanings" && slug in categoryLabels;
 }
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
