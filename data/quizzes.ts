@@ -1,6 +1,30 @@
 import type { Quiz } from "@/types/content";
+import { universeMessageQuiz } from "@/data/quiz-universe-message";
 
 export const quizzes: Quiz[] = [
+  {
+    title: universeMessageQuiz.title,
+    slug: universeMessageQuiz.slug,
+    excerpt: universeMessageQuiz.description,
+    intro: universeMessageQuiz.intro.join("\n\n"),
+    questions: universeMessageQuiz.questions.map((question) => ({
+      question: question.question,
+      options: question.options.map((option) => ({
+        label: `${option.label}. ${option.text}`,
+        resultKey: option.resultKey
+      }))
+    })),
+    results: Object.values(universeMessageQuiz.results).map((result) => ({
+      key: result.key,
+      name: result.title,
+      summary: result.universeReminder,
+      detail: result.analysis.join("\n\n"),
+      tarotCard: result.tarotCard,
+      crystal: result.keywords.join("、"),
+      actions: result.actions,
+      relatedSlugs: ["tarot-shows-choices", "guardian-crystal-guide"]
+    }))
+  },
   {
     title: "你的守護水晶是哪一種？",
     slug: "guardian-crystal",

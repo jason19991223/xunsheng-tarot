@@ -11,7 +11,7 @@ type QuizPageProps = {
 };
 
 export function generateStaticParams() {
-  return quizzes.map((quiz) => ({ slug: quiz.slug }));
+  return quizzes.filter((quiz) => quiz.slug !== "universe-message").map((quiz) => ({ slug: quiz.slug }));
 }
 
 export async function generateMetadata({ params }: QuizPageProps): Promise<Metadata> {
