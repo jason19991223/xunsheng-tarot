@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Footer } from "@/components/Footer";
 import { GoogleTools } from "@/components/GoogleTools";
 import { Header } from "@/components/Header";
@@ -49,6 +50,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <main>{children}</main>
         <Footer />
         <GoogleTools />
+        <Analytics />
       </body>
     </html>
   );
