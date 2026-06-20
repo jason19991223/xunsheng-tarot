@@ -1,4 +1,5 @@
 import type { Quiz } from "@/types/content";
+import { intuitionTypeQuiz } from "@/data/quiz-intuition-type";
 import { universeMessageQuiz } from "@/data/quiz-universe-message";
 
 export const quizzes: Quiz[] = [
@@ -23,6 +24,29 @@ export const quizzes: Quiz[] = [
       crystal: result.keywords.join("、"),
       actions: result.actions,
       relatedSlugs: ["tarot-shows-choices", "guardian-crystal-guide"]
+    }))
+  },
+  {
+    title: intuitionTypeQuiz.title,
+    slug: intuitionTypeQuiz.slug,
+    excerpt: intuitionTypeQuiz.description,
+    intro: intuitionTypeQuiz.intro.join("\n\n"),
+    questions: intuitionTypeQuiz.questions.map((question) => ({
+      question: question.question,
+      options: question.options.map((option) => ({
+        label: `${option.label}. ${option.text}`,
+        resultKey: option.resultKey
+      }))
+    })),
+    results: Object.values(intuitionTypeQuiz.results).map((result) => ({
+      key: result.key,
+      name: result.title,
+      summary: result.reminder,
+      detail: result.analysis.join("\n\n"),
+      tarotCard: result.tarotCard,
+      crystal: result.crystal,
+      actions: result.actions,
+      relatedSlugs: ["high-priestess-intuition", "intuition-or-anxiety", "tarot-shows-choices"]
     }))
   },
   {

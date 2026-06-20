@@ -9,12 +9,19 @@ import { ShareButtons } from "@/components/ShareButtons";
 
 type Scores = Record<string, number>;
 
-function getTopResult(quiz: Quiz, scores: Scores): QuizResult {
-  const topKey = quiz.results.reduce((current, result) => {
-    const currentScore = scores[current] ?? 0;
-    const nextScore = scores[result.key] ?? 0;
-    return nextScore > currentScore ? result.key : current;
-  }, quiz.results[0].key);
+function getTopResult(quiz: Quiz, scores: Scores, tieBreakerKey?: string): QuizResult {
+  const highestScore = Math.max(...quiz.results.map((result) => scores[result.key] ?? 0));
+  const topResults = quiz.results.filter((result) => (scores[result.key] ?? 0) === highestScore);
+
+  if (topResults.length > 1 && tieBreakerKey) {
+    const tieBreakerResult = quiz.results.find((result) => result.key === tieBreakerKey);
+
+    if (tieBreakerResult) {
+      return tieBreakerResult;
+    }
+  }
+
+  const topKey = topResults[0]?.key ?? quiz.results[0].key;
 
   return quiz.results.find((result) => result.key === topKey) ?? quiz.results[0];
 }
@@ -32,7 +39,8 @@ export function QuizEngine({ quiz }: { quiz: Quiz }) {
     }, {});
   }, [answers]);
 
-  const result = getTopResult(quiz, scores);
+  const finalAnswerKey = answers[quiz.questions.length - 1];
+  const result = getTopResult(quiz, scores, finalAnswerKey);
   const isComplete = Object.keys(answers).length === quiz.questions.length;
 
   function reset() {
