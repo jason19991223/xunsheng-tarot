@@ -230,7 +230,6 @@ export const articles: Article[] = articleSeeds.filter((article) => article.cate
     ...article,
     categoryLabel,
     publishedAt: `2026-06-${String(index + 1).padStart(2, "0")}`,
-    readingTime: index % 3 === 0 ? "6 分鐘" : "5 分鐘",
     relatedArticles,
     metaTitle: `${article.title}｜尋聲塔羅`,
     metaDescription: article.excerpt,

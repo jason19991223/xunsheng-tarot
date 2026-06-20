@@ -183,7 +183,6 @@ types/                TypeScript 型別
 - `categoryLabel`
 - `tags`
 - `publishedAt`
-- `readingTime`
 - `body`
 - `relatedSlugs`
 

@@ -20,7 +20,6 @@ export type Article = {
   categoryLabel: string;
   tags: string[];
   publishedAt: string;
-  readingTime: string;
   relatedArticles: string[];
   relatedQuizzes: string[];
   metaTitle: string;
