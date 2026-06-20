@@ -9,8 +9,6 @@ export function ArticleCard({ article }: { article: Article }) {
         <span>{article.categoryLabel}</span>
         <span>/</span>
         <span>{article.publishedAt}</span>
-        <span>/</span>
-        <span>{article.readingTime}</span>
       </div>
       <h2 className="mt-3 font-serif text-2xl font-semibold leading-snug text-midnight">
         <Link href={`/articles/${article.slug}`} className="hover:text-violetdeep">

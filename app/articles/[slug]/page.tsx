@@ -66,8 +66,6 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
             <span>{article.categoryLabel}</span>
             <span>/</span>
             <span>{article.publishedAt}</span>
-            <span>/</span>
-            <span>{article.readingTime}</span>
           </div>
           <h1 className="mt-4 font-serif text-4xl font-semibold leading-tight text-midnight">
             {article.title}
