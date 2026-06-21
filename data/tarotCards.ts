@@ -32,13 +32,13 @@ export const tarotCards: TarotCard[] = majorArcanaSeeds.map(([number, name, engl
   arcana: "major",
   number,
   keywords: [...keywords],
-  uprightMeaning: [
-    `${name}的正位提醒你靠近「${keywords[0]}」的力量，讓事情在更清楚的位置上被看見。`,
+  coreMeaning: [
+    `${name}提醒你靠近「${keywords[0]}」的力量，讓事情在更清楚的位置上被看見。`,
     `這張牌通常不是單一事件答案，而是一種正在浮現的心理狀態或生命課題。`,
     `如果它出現在牌陣中，可以先觀察它與其他牌之間是推動、提醒，還是要求你停下來整理。`
   ],
-  reversedMeaning: [
-    `${name}逆位可能表示這股能量被壓抑、過度使用，或尚未找到健康出口。`,
+  shadowMeaning: [
+    `${name}也提醒你留意這股能量被壓抑、過度使用，或尚未找到健康出口的狀態。`,
     `它不必然代表壞事，而是提醒你檢查是否正在逃避、用力過度，或被舊慣性牽引。`
   ],
   loveReading: `感情中，${name}提醒你看見關係裡的${keywords[1]}。它適合用來整理期待、界線與真實需求，不建議拿來做絕對預測。`,

@@ -6,13 +6,13 @@ import { tarotCards } from "@/data/tarotCards";
 
 export const metadata: Metadata = {
   title: "塔羅牌義",
-  description: "完整大阿爾克那 22 張塔羅牌義，包含正位、逆位、感情、工作與自我探索提醒。",
+  description: "完整大阿爾克那 22 張塔羅牌義，包含核心象徵、陰影提醒、感情、工作與自我探索提醒。",
   alternates: {
     canonical: `${siteContent.url}/tarot-meanings`
   },
   openGraph: {
     title: `塔羅牌義｜${siteContent.name}`,
-    description: "完整大阿爾克那 22 張塔羅牌義，包含正位、逆位、感情、工作與自我探索提醒。",
+    description: "完整大阿爾克那 22 張塔羅牌義，包含核心象徵、陰影提醒、感情、工作與自我探索提醒。",
     url: `${siteContent.url}/tarot-meanings`
   }
 };

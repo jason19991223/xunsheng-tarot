@@ -66,18 +66,18 @@ export default async function TarotCardDetailPage({ params }: TarotCardPageProps
         </header>
 
         <section className="mt-8">
-          <h2 className="font-serif text-2xl font-semibold text-midnight">正位含義</h2>
+          <h2 className="font-serif text-2xl font-semibold text-midnight">核心含義</h2>
           <div className="mt-4 grid gap-4 text-base leading-8 text-ink/72">
-            {card.uprightMeaning.map((paragraph) => (
+            {card.coreMeaning.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
         </section>
 
         <section className="mt-8">
-          <h2 className="font-serif text-2xl font-semibold text-midnight">逆位含義</h2>
+          <h2 className="font-serif text-2xl font-semibold text-midnight">陰影提醒</h2>
           <div className="mt-4 grid gap-4 text-base leading-8 text-ink/72">
-            {card.reversedMeaning.map((paragraph) => (
+            {card.shadowMeaning.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>

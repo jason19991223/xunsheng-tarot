@@ -63,8 +63,8 @@ export type TarotCard = {
   arcana: "major" | "minor";
   number: string;
   keywords: string[];
-  uprightMeaning: string[];
-  reversedMeaning: string[];
+  coreMeaning: string[];
+  shadowMeaning: string[];
   loveReading: string;
   careerReading: string;
   selfReflection: string;
